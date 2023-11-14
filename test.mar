@@ -1,0 +1,44 @@
+let numbers = [1, 2, 3, 4, 5]
+for(numbers : number) {
+    print("Number is ", number)
+}
+
+# This is a single line comment
+let x, y = (10, 20);
+z = (x < y) ? "X is lt Y" : "X is gt Y"
+
+class Shape {
+    func Shape(me, name:) {
+        me.name = name
+    }
+    func draw(me) {
+        print("Drawing shape -- ", me.name)
+    }
+}
+class Rectangle(Shape) {
+    func Rectangle(me, name:) {
+    	 parent Shape(name)
+    }
+}
+/*
+* Rectangle is a subclass of Shape.
+* This means any Rectangle object will inherit all Shape methods.
+*
+*  i.e. the draw() method.
+*/
+let rectangle = Rectangle("Rect")
+rectangle.draw()
+
+class Car {
+    func Car(me, name="Audi", year=2019) {
+        me.name = name
+        me.year = year
+        me.milage = 0
+    }
+    func drive(me, distance : me.milage) {
+         me.milage = me.milage + distance
+    }
+}
+car = Car()
+total_distance_covered = car.drive(40)
+
